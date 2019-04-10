@@ -49,3 +49,26 @@ function addWithClassTime(elements, classElement, definitiveTime){
 	}, definitiveTime)
 }
 
+ /*
+ Funcion que agrega un elemento html con contenido en tiempo definido (segundos), recibe el tipo de elemento,
+ la clase que tendra el elemento y el tiempo a crear (milisegundos).
+*/
+function addElementTime(typeElement,classElement, content, time){
+	let elements = 0;
+	
+	let time = setTimeout((e)=>{
+		
+	   elements = document.createElement(typeElement);
+		    elements.classList.add(classElement);
+		    elements.textContent = content;
+		
+	}, time)
+	
+	return elements;
+
+}
+
+
+
+
+
