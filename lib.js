@@ -48,4 +48,3 @@ function addWithClassTime(elements, classElement, definitiveTime){
 		elements.classList.add(classElement);
 	}, definitiveTime)
 }
-
