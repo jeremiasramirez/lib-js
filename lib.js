@@ -1,50 +1,51 @@
- /*
- funcion que elimina un elemento html en un tiempo definido en milisegundos
-  3 segundos, recibe el elemento html y el tiempo
- */
-
-function deletingItem(element, elementTime){
+//funcion que elimina un elemento html en un tiempo definido(millisegundos), le pasamos el elemento html y el tiempo a eliminar
+const deleteElementTime = (empty, time) => {
 
 		setTimeout((e)=>{
 
-			element.remove();
+			empty.remove();
 		 
-		},elementTime)
+		}, time)
 
 }
 
- /*
- funcion que elimina al instante la clase de un elemento html , recibe como parametro el elemento
- html  y la clase que le vas a eliminar
- */
-function deleteWithClass(elements,classElement){
+//elimina la clase de un elemento , recibe el elemento y la clase del elemento
+const deleteWithClass = (elements, classElement) => {
 	elements.classList.remove(classElement);
 }
 
-/*
- Funcion que agrega al instante una clase a un elemento html , recibe como parametro el elemento
- html  y la clase que le vas a agregar
- */
-function addWithClass(elements,classElement){
+//elimina elemento html por id
+const deleteElement = (elementId) => {
+	document.getElementById(elementId).remove();
+}
+
+
+//agrega clase a un elemento , recibe el elemento y la clase del elemento
+const addWithClass = (elements, classElement) => {
 	elements.classList.add(classElement);
 }
+
 /*
- Funcion que elimina la clase de un elemento html en un tiempo definido, recibe como parametro
- el elemento html, la clase que le vas a eliminar y el tiempo en que la vas a eliminar
- */
-function deleteWithClassTime(elements, classElement, definitiveTime){
+ *elimina la clase de un elemento en tiempo definido (segundos), recibe el elemento html,
+  la clase del elemento y el tiempo en milisegundos
+*/
+const deleteWithClassTime = (elements, classElement, definitiveTime) => {
+
 	let elementTime = setTimeout((e)=>{
 		elements.classList.remove(classElement);
 	}, definitiveTime);
+
 }
 
 
 /*
- *Funcion que agrega clase a un elemento en tiempo definido (segundos), recibe el elemento html,
- la clase del elemento y los segundos en milisegundos
+ *agrega clase a un elemento en tiempo definido (segundos), recibe el elemento html, la clase del elemento
+ y los segundos en milisegundos
 */
-function addWithClassTime(elements, classElement, definitiveTime){
+const addWithClassTime = (elements, classElement, definitiveTime) => {
+
 	let elementTime = setTimeout((e)=>{
 		elements.classList.add(classElement);
 	}, definitiveTime)
+
 }
